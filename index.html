@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <div class="tab" data-userWeather>Your Weather</div>
+            <div class="tab" data-searchWeather>Search Weather</div>
+        </div>
+
+        <div class="weather-container">
+
+            <!-- grant location access interface -->
+                <div class="sub-container grant-location-container active">
+                    <img src="./images/location.png" height="100" width="100" alt="" loading="lazy">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access to get Weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
+                </div>
+
+
+
+            <!-- search form -> form container -->
+            <form class="sub-container2 form-container " data-searchForm>
+                <input placeholder="Search for City..." data-searchInput />
+                <button type="submit" class="btn">
+                    <span class="search">Search</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <div class="sub-container loading-container">
+                <div class='loader-container'>
+                    <div class='loader class1'>
+            
+                    </div>
+                    <div class='loader class2 '>
+                        <p class=' '></p>
+                        <div></div>
+                    </div>
+                    <p class='loader class3 '></p>
+        
+                    <div class='class4'>
+                        <div class='loader cards '>
+                            
+                        </div>
+                        <div class='loader cards  '>
+                            
+                        </div>
+                        <div class='loader cards  '>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="sub-container user-info-container">
+
+                <!-- cityname and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description -->
+                <div class="flex">
+                    <p class="capitalise" data-weatherDescription></p>
+                    <img data-weatherIcon>
+                </div>
+                <p class="bigger" data-temp></p>
+                
+
+                <div class="parameter-cards">
+                    <div class="parameter">
+                        <img src="./images/wind.png" height="50" width="50">
+                        <p>Windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="./images/humidity.png" height="50" width="50">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <div class="parameter">
+                        <img src="./images/clouds.png" height="50" width="50">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sub-container errorMsg">
+                <img src="./images/error.png" alt="" height="200px" width="200px">
+                <p data-errorMsg></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/e72a8a01fb.js" crossorigin="anonymous"></script>
+</body>
+</html>
